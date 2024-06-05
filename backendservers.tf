@@ -13,7 +13,7 @@ resource "azurerm_network_interface" "my_vm_nic" {
 }
 
 
-# Adiciona VMs no Address pool com count
+# Adiciona VMs no Address pool 
 resource "azurerm_network_interface_backend_address_pool_association" "my_nic_vm_addresspool" {
   count                   = 2
   network_interface_id    = azurerm_network_interface.my_vm_nic[count.index].id
