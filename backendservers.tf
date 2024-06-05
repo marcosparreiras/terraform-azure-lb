@@ -60,7 +60,7 @@ resource "azurerm_linux_virtual_machine" "my_vm" {
   network_interface_ids = [azurerm_network_interface.my_vm_nic[count.index].id]
   size                  = "Standard_DS1_v2"
   os_disk {
-    name                 = "myVM2OsDisk"
+    name                 = "myVM${count.index + 1}OsDisk"
     caching              = "ReadWrite"
     storage_account_type = "StandardSSD_LRS"
   }
