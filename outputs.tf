@@ -11,9 +11,9 @@ output "bastion_public_ip_address" {
 }
 
 output "vm1_private_ip_address" {
-  value = azurerm_linux_virtual_machine.my_vm[1].private_ip_address
+  value = azurerm_linux_virtual_machine.my_vm[0].private_ip_address
 }
 
 output "vm2_private_ip_address" {
-  value = azurerm_linux_virtual_machine.my_vm[2].private_ip_address
+  value = azurerm_linux_virtual_machine.my_vm[1].private_ip_address
 }
